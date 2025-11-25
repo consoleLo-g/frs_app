@@ -5,11 +5,22 @@ class LiveViewScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      appBar: AppBar(title: const Text("Live View")),
       body: Center(
-        child: Text(
-          "Live CCTV View (WebRTC coming later)",
-          style: TextStyle(fontSize: 22),
+        child: Container(
+          height: 250,
+          width: 350,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(color: Colors.grey, width: 2),
+          ),
+          child: const Center(
+            child: Text(
+              "Camera Feed (Coming Soon)",
+              style: TextStyle(fontSize: 18, color: Colors.grey),
+            ),
+          ),
         ),
       ),
     );
